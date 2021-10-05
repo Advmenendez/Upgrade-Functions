@@ -9,9 +9,6 @@ function findLongestWord(avengers) {
       if (avengers[index].length > avengerBiggest.length) {
         avengerBiggest = avengers[index];
       }
-      if (avengers[index].length === avengerBiggest.length) {
-        avengerBiggest = avengers[index];
-      }
 
     }
     console.log("Nombre más largo: ", avengerBiggest);
