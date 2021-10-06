@@ -4,20 +4,17 @@
 
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
 function averageWord(param) {
-    let sumString = 0 ;
-    let sum = 0;
-    
-    for (let i = 0; i < mixedElements.length; i++) {
-        if(mixedElements[i].length === String){
-            sumString += mixedElements[i];
+    let count= 0 ;
+    for (let index = 0; index < param.length; index++) {
+        if(typeof param[index] === "string") {
+            count += param[index].length
+        } else {
+            count += param[index]
         }
-        else {
-            sum += mixedElements[i]
-           
-        }
-    
+        
     }
-  let sumTotal = sum + sumString;
-  console.log(sumTotal)
+    return count 
+
+
 }
-averageWord()
+console.log(averageWord(mixedElements))
