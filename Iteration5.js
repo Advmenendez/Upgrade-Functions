@@ -1,20 +1,21 @@
 //Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume
 
 
-
-const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
-function averageWord(param) {
-    let count= 0 ;
-    for (let index = 0; index < param.length; index++) {
-        if(typeof param[index] === "string") {
-            count += param[index].length
-        } else {
-            count += param[index]
-        }
-        
+const mixedElements = [10, "pizza", 45, "Pepe", 3, "gato", 80, "macarrones"];
+function calculateAverageThings(cualquierArray) {
+    let counter = 0;
+  
+    for (let i = 0; i < cualquierArray.length; i++) {
+      if (typeof cualquierArray[i] === "string") {
+        counter += cualquierArray[i].length;
+      }
+      if (typeof cualquierArray[i] === "number") {
+        counter += cualquierArray[i];
+      }
     }
-    return count 
-
-
-}
-console.log(averageWord(mixedElements))
+    return console.log(
+      "La suma de los diferentes elementos es:",
+      counter
+    );
+  }
+  calculateAverageThings(mixedElements);

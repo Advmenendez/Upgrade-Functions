@@ -15,14 +15,15 @@ const nameFinder = [
     'Jessica',
     'Marc'
   ];
-  function finderName(param, name) {
-    let result;
-    for (let index = 0; index < param.length; index++) {
-      if(param[index]=== name) {
-        return index
+  function finderName(cualquierArray, nombre) {
+    for (let i = 0; i < cualquierArray.length; i++) {
+      if (cualquierArray[i] === nombre) {
+        return console.log(
+          `Existe, está en la posición ${i} del array, y se llama ${cualquierArray[i]}.`
+        );
       }
-      
     }
-    return  "No hay resultado" 
+    return console.log("El nombre que estás buscando no existe.");
   }
-  console.log(finderName(nameFinder,"Steve"))
+  
+  finderName(nameFinder, "Natasha");

@@ -13,13 +13,17 @@ const counterWords = [
     'upgrade',
     'code'
   ];
-  let counter = 0;
-  function repeatCounter(array,word) {
-    for (let index = 0; index < array.length; index++) {
-        if(array[index].includes(word)) {
-            counter += 1
-        }    
+  function repeatCounter(cualquierArray) {
+    let counter = {};
+  
+    for (let i = 0; i < cualquierArray.length; i++) {
+      if (cualquierArray[i] in counter) {
+        counter[cualquierArray[i]]++;
+      } else {
+        counter[cualquierArray[i]] = 1;
+      }
     }
-    console.log(counter)
+    return console.log(counter);
   }
-  repeatCounter(counterWords,"repeat")
+  
+  repeatCounter(counterWords);
